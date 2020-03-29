@@ -1,0 +1,6 @@
+<div class="form" *ngIf="category">
+    <input [(ngModel)]="category.title" disabled > <br>
+    <input [(ngModel)]="category.anons" disabled><br>
+    <input [(ngModel)]="category.desc" disabled><br>
+    <a [routerLink]="['/', 'category', 'edit', category.id]">Изменить</a>
+</div>
