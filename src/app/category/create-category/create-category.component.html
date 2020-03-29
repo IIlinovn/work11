@@ -1,0 +1,7 @@
+<a [routerLink]="['/category']"> К категориям </a> 
+<div class="form" *ngIf="category">
+    <input [(ngModel)]="category.title" > <br>
+    <input [(ngModel)]="category.anons" ><br>
+    <input [(ngModel)]="category.desc" ><br>
+    <button (click)="create()">Save</button>
+</div>
