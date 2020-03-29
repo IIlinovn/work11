@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Category } from 'src/app/products.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from '../category.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class EditCategoryComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   category: Category = null
@@ -24,7 +25,9 @@ export class EditCategoryComponent implements OnInit {
   }
 
   save() {
-    this.categoryService.update(this.category).subscribe()
+    this.categoryService.update(this.category).subscribe(() => {
+      this.router.navigate(['/category'])
+    })
   }
 
 }
