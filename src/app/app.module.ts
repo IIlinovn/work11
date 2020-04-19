@@ -9,6 +9,7 @@ import { ListItemsComponent } from './list-items/list-items.component';
 import { ViewItemComponent } from './view-item/view-item.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { CategoryModule } from './category/category.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CategoryModule } from './category/category.module';
     ReactiveFormsModule,
     FormsModule,
     CategoryModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

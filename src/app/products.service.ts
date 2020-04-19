@@ -26,7 +26,7 @@ export class ProductsService {
   }
 }
 
-export const baseUrl = "http://localhost:8000"
+export const baseUrl = "http://lesson-3.iilinov-n.myjino.ru/"
 
 export type Product = {
   "id": number,

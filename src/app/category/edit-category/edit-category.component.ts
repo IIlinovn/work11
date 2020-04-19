@@ -30,4 +30,10 @@ export class EditCategoryComponent implements OnInit {
     })
   }
 
+  delete() {
+    this.categoryService.remove(this.category.id).subscribe(() => {
+      this.router.navigate(['/category'])
+    })
+  }
+
 }
